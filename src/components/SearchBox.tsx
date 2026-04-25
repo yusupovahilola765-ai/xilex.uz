@@ -125,7 +125,7 @@ export default function SearchBox() {
           onChange={(e) => setCategoryFilter(e.target.value)}
         >
           {uniqueCategories.map(cat => (
-            <option key={cat} value={cat} style={{ color: 'black' }}>{cat}</option>
+            <option key={cat || 'all'} value={cat || ''} style={{ color: 'black' }}>{cat}</option>
           ))}
         </select>
       </div>
